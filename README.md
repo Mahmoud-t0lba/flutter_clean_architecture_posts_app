@@ -1,17 +1,7 @@
-# post_clean_arc
+# flutter_clean_architecture
 
-A new Flutter project.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
+![bloc-architecture](https://user-images.githubusercontent.com/78425511/184106968-8a3570f4-42f4-40ca-9e1f-63e8f3957103.png)
+![clean-architecture-2](https://user-images.githubusercontent.com/78425511/184106975-df97c2b1-e070-4f49-af9e-79b4f3531f6e.png)
+![clean-architecture](https://user-images.githubusercontent.com/78425511/184106979-2165fc38-53d3-4e51-b546-972bbc87c651.jpg)
