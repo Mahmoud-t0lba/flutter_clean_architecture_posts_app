@@ -1,5 +1,3 @@
-// ignore_for_file: constant_identifier_names
-
-const ADD_SUCCESS_MESSAGE = "Post Added Successfully";
-const DELETE_SUCCESS_MESSAGE = "Post Deleted Successfully";
-const UPDATE_SUCCESS_MESSAGE = "Post Updated Successfully";
+const String addSuccessMessage = "Post Added Successfully";
+const String deleteSuccessMessage = "Post Deleted Successfully";
+const String updateSuccessMessage = "Post Updated Successfully";

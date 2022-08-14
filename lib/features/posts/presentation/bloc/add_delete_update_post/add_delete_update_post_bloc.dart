@@ -1,14 +1,14 @@
 import 'package:bloc/bloc.dart';
-import '../../../../../core/strings/messages.dart';
-import '../../../domain/entities/post.dart';
-import '../../../domain/usecases/add_post.dart';
-import '../../../domain/usecases/delete_post.dart';
-import '../../../domain/usecases/update_post.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 
 import '../../../../../core/error/failures.dart';
 import '../../../../../core/strings/failures.dart';
+import '../../../../../core/strings/messages.dart';
+import '../../../domain/entities/post.dart';
+import '../../../domain/usecases/add_post.dart';
+import '../../../domain/usecases/delete_post.dart';
+import '../../../domain/usecases/update_post.dart';
 
 part 'add_delete_update_post_event.dart';
 part 'add_delete_update_post_state.dart';
@@ -31,7 +31,7 @@ class AddDeleteUpdatePostBloc
 
         emit(
           _eitherDoneMessageOrErrorState(
-              failureOrDoneMessage, ADD_SUCCESS_MESSAGE),
+              failureOrDoneMessage, addSuccessMessage),
         );
       } else if (event is UpdatePostEvent) {
         emit(LoadingAddDeleteUpdatePostState());
@@ -40,7 +40,7 @@ class AddDeleteUpdatePostBloc
 
         emit(
           _eitherDoneMessageOrErrorState(
-              failureOrDoneMessage, UPDATE_SUCCESS_MESSAGE),
+              failureOrDoneMessage, updateSuccessMessage),
         );
       } else if (event is DeletePostEvent) {
         emit(LoadingAddDeleteUpdatePostState());
@@ -49,7 +49,7 @@ class AddDeleteUpdatePostBloc
 
         emit(
           _eitherDoneMessageOrErrorState(
-              failureOrDoneMessage, DELETE_SUCCESS_MESSAGE),
+              failureOrDoneMessage, deleteSuccessMessage),
         );
       }
     });
@@ -68,9 +68,9 @@ class AddDeleteUpdatePostBloc
   String _mapFailureToMessage(Failure failure) {
     switch (failure.runtimeType) {
       case ServerFailure:
-        return SERVER_FAILURE_MESSAGE;
+        return serverFailureMessage;
       case OfflineFailure:
-        return OFFLINE_FAILURE_MESSAGE;
+        return offlineFailureMessage;
       default:
         return "Unexpected Error , Please try again later .";
     }
